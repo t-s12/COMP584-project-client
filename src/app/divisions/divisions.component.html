@@ -1,1 +1,22 @@
-<p>divisions works!</p>
+<h1>Divisions</h1>
+@if (divisions){
+    <table class='table table-striped' aria-labelledby="tableLabel">
+        <thead>
+          <tr>
+            <th>Division</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (division of divisions; track division.id) {
+            <tr ngFor="let country of countries">
+              <td> <a [routerLink]="['/CountryPopulation', division.id]">{{ division.id }}</a></td>
+              <td>{{ division.name }}</td>
+
+            </tr>  
+          }
+        </tbody>
+      </table>
+} @else {
+    <p><em>Loading...</em></p>
+}
+
