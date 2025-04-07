@@ -8,10 +8,9 @@
         </thead>
         <tbody>
           @for (division of divisions; track division.id) {
-            <tr ngFor="let country of countries">
-              <td> <a [routerLink]="['/CountryPopulation', division.id]">{{ division.id }}</a></td>
+            <tr ngFor="let division of divisions">
               <td>{{ division.name }}</td>
-
+              <td>{{ division.teams }}</td>
             </tr>  
           }
         </tbody>
@@ -19,4 +18,3 @@
 } @else {
     <p><em>Loading...</em></p>
 }
-

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Division } from '../division';
 import { environment } from '../../environments/environment.development';
 
@@ -19,6 +19,7 @@ export class DivisionsComponent implements OnInit{
   
   ngOnInit(): void {
     this.getDivisions();
+
   }
 
   getDivisions() {
