@@ -23,7 +23,7 @@ export class DivisionsComponent implements OnInit{
   }
 
   getDivisions() {
-    this.http.get<Division[]>(`${environment.baseUrl}api/Divisions`).subscribe({
+    this.http.get<Division[]>(`${environment.baseUrl}api/Divisions/WithTeams`).subscribe({
       next: result => this.divisions = result,
       error: error => console.error(error),
     });

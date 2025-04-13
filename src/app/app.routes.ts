@@ -7,5 +7,6 @@ export const routes: Routes = [
     {path: "divisions", component: DivisionsComponent},
     {path: "teams", component: TeamsComponent},
     {path: "players", component: PlayersComponent},
+    {path: "teams/:id", component: TeamsComponent},
     {path: "", component: DivisionsComponent, pathMatch: "full"},
 ];

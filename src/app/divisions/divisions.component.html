@@ -9,8 +9,15 @@
         <tbody>
           @for (division of divisions; track division.id) {
             <tr ngFor="let division of divisions">
-              <td>{{ division.name }}</td>
-              <td>{{ division.teams }}</td>
+              <td>{{ division.name }} - </td>
+              <td>
+                <ul>
+                  <!-- Loop over teams for each division -->
+                  @for (team of division.teams; track team.id){
+                    <td> <a [routerLink]="['/teams', team.id]">{{ team.name }}</a></td>
+                }
+                </ul>
+              </td>
             </tr>  
           }
         </tbody>
