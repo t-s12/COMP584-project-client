@@ -1,0 +1,40 @@
+@if (player) {
+    <h2>{{ player.firstName }} {{ player.lastName }}</h2>
+    <table class='table table-striped' aria-labelledby="tableLabel">
+      <thead>
+        <tr>
+          <th>W</th>
+          <th>L</th>
+          <th>G</th>
+          <th>ERA</th>
+          <th>SV</th>
+          <th>IP</th>
+          <th>SO</th>
+          <th>BB</th>
+          <th>H</th>
+          <th>HBP</th>
+          <th>WHIP</th>
+          <th>FIP</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr>
+            <td>{{ player.wins }}</td>
+            <td>{{ player.loses }}</td>
+            <td>{{ player.gamesPlayed }}</td>
+            <td>{{ player.era }}</td>
+            <td>{{ player.saves }}</td>
+            <td>{{ player.inningsPitched }}</td>
+            <td>{{ player.strikeouts }}</td>
+            <td>{{ player.walks }}</td>
+            <td>{{ player.hits }}</td>
+            <td>{{ player.hitByPitch }}</td>
+            <td>{{ player.whip }}</td>
+            <td>{{ player.fip }}</td>
+          </tr>  
+        
+      </tbody>
+    </table>
+  } @else {
+    <p><em>Loading...</em></p>
+  }

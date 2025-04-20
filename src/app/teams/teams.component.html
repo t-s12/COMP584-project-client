@@ -1,13 +1,19 @@
-<p>teams works!</p>
 @if(team){
     <h2>{{ team.name }}</h2>
     <p> Pitchers </p>
     @for (pitcher of team.pitchers; track pitcher.id){
-        <td>{{ pitcher.firstName }} {{ pitcher.lastName }}</td>
+        <td> <a [routerLink]="['/pitcher', pitcher.id]">
+            {{ pitcher.firstName }} {{ pitcher.lastName }}
+            </a>
+        </td>
     }
     <p> Hitters </p>
     @for (position_player of team.position_Players; track position_player.id){
-        <td>{{ position_player.firstName }} {{ position_player.lastName }}</td>
+        <td> 
+            <a [routerLink]="['/position_player', position_player.id]">
+                {{ position_player.firstName }} {{ position_player.lastName }}
+            </a>
+        </td>
     }
 }@else {
     <p><em>Loading...</em></p>
