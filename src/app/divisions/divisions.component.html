@@ -1,27 +1,22 @@
 <h1>Divisions</h1>
-@if (divisions){
-    <table class='table table-striped' aria-labelledby="tableLabel">
-        <thead>
-          <tr>
-            <th>Division</th>
-          </tr>
-        </thead>
-        <tbody>
-          @for (division of divisions; track division.id) {
-            <tr>
-              <td>{{ division.name }} - </td>
-              <td>
-                <ul>
-                  <!-- Loop over teams for each division -->
-                  @for (team of division.teams; track team.id){
-                    <td> <a [routerLink]="['/teams', team.id]">{{ team.name }}</a></td>
-                }
-                </ul>
-              </td>
-            </tr>  
+
+@if (divisions?.length) {
+  <div class="divisions-grid">
+    @for (division of divisions; track division.id) {
+      <div class="division-card">
+        <h2>{{ division.name }}</h2>
+        <ul class="teams-list">
+          @for (team of division.teams; track team.id) {
+            <li>
+              <a [routerLink]="['/teams', team.id]">
+                {{ team.location }} {{ team.name }}
+              </a>
+            </li>
           }
-        </tbody>
-      </table>
+        </ul>
+      </div>
+    }
+  </div>
 } @else {
-    <p><em>Loading...</em></p>
+  <p><em>Loading...</em></p>
 }

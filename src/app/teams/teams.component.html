@@ -1,22 +1,36 @@
-@if(team){
-    <h2>{{ team.name }}</h2>
-    <p> Pitchers </p>
-    @for (pitcher of team.pitchers; track pitcher.id){
-        <td> <a [routerLink]="['/pitcher', pitcher.id]">
-            {{ pitcher.firstName }} {{ pitcher.lastName }}
-            </a>
-        </td>
-    }
-    <p> Hitters </p>
-    @for (position_player of team.position_Players; track position_player.id){
-        <td> 
-            <a [routerLink]="['/position_player', position_player.id]">
-                {{ position_player.firstName }} {{ position_player.lastName }}
-            </a>
-        </td>
-    }
-}@else {
+@if (team) {
+    <div class="team-container">
+      <h2>{{ team.location }} {{ team.name }}</h2>
+  
+      <div class="players-section">
+        <div class="player-group">
+          <h3>Pitchers</h3>
+          <ul class="player-list">
+            @for (pitcher of team.pitchers; track pitcher.id) {
+              <li>
+                <a [routerLink]="['/pitcher', pitcher.id]">
+                  {{ pitcher.name }}
+                </a>
+              </li>
+            }
+          </ul>
+        </div>
+  
+        <div class="player-group">
+          <h3>Hitters</h3>
+          <ul class="player-list">
+            @for (position_player of team.position_Players; track position_player.id) {
+              <li>
+                <a [routerLink]="['/position_player', position_player.id]">
+                  {{ position_player.name }}
+                </a>
+              </li>
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+  } @else {
     <p><em>Loading...</em></p>
-}
-
+  }
   

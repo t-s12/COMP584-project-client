@@ -1,0 +1,42 @@
+.team-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    text-align: center;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+  }
+  
+  .players-section {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .player-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .player-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+  }
+  
+  .player-list li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .player-list a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  .player-list a:hover {
+    text-decoration: underline;
+  }
+  

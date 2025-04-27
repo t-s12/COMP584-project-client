@@ -1,44 +1,56 @@
 @if (player) {
-    <h2>{{ player.firstName }} {{ player.lastName }}</h2>
-    <table class='table table-striped' aria-labelledby="tableLabel">
-      <thead>
-        <tr>
-          <th>G</th>
-          <th>PA</th>
-          <th>AB</th>
-          <th>H</th>
-          <th>HR</th>
-          <th>RBI</th>
-          <th>SO</th>
-          <th>BB</th>
-          <th>SB</th>
-          <th>CS</th>
-          <th>BA</th>
-          <th>OBP</th>
-          <th>SLG</th>
-          <th>OPS</th>
-        </tr>
-      </thead>
-      <tbody>
+  <div class="position-player-container">
+    <h2>{{ player.name }}</h2>
+
+    <div class="stats-table-wrapper">
+      <table class="stats-table">
+        <thead>
           <tr>
-            <td>{{ player.gamesPlayed }}</td>
-            <td>{{ player.plateAppearances }}</td>
-            <td>{{ player.atBats }}</td>
+            <th>G</th>
+            <th>PA</th>
+            <th>AB</th>
+            <th>BA</th>
+            <th>H</th>
+            <th>2B</th>
+            <th>3B</th>
+            <th>HR</th>
+            <th>R</th>
+            <th>RBI</th>
+            <th>IBB</th>
+            <th>SO</th>
+            <th>HBP</th>
+            <th>SF</th>
+            <th>SH</th>
+            <th>GDP</th>
+            <th>SB</th>
+            <th>CS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{ player.games_Played }}</td>
+            <td>{{ player.plate_Appearances }}</td>
+            <td>{{ player.at_Bats }}</td>
+            <td>{{ player.batting_Average }}</td>
             <td>{{ player.hits }}</td>
-            <td>{{ player.homeRuns }}</td>
-            <td>{{ player.rbis }}</td>
+            <td>{{ player.doubles }}</td>
+            <td>{{ player.triples }}</td>
+            <td>{{ player.home_Runs }}</td>
+            <td>{{ player.runs_Scored }}</td>
+            <td>{{ player.rbi }}</td>
+            <td>{{ player.intentional_Walks }}</td>
             <td>{{ player.strikeouts }}</td>
-            <td>{{ player.walks }}</td>
-            <td>{{ player.stolenBases }}</td>
-            <td>{{ player.caughtStealing }}</td>
-            <td>{{ player.battingAverage }}</td>
-            <td>{{ player.obp }}</td>
-            <td>{{ player.slg }}</td>
-            <td>{{ player.ops }}</td>
-          </tr>  
-        
-      </tbody>
-    </table>
-  } @else {
-    <p><em>Loading...</em></p>
-  }
+            <td>{{ player.hbp }}</td>
+            <td>{{ player.sac_Fly }}</td>
+            <td>{{ player.sac_Hit }}</td>
+            <td>{{ player.gdp }}</td>
+            <td>{{ player.stolen_Bases }}</td>
+            <td>{{ player.caught_Stealing }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+} @else {
+  <p><em>Loading...</em></p>
+}

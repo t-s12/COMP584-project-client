@@ -1,0 +1,35 @@
+.pitcher-container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    text-align: center;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+  }
+  
+  .stats-table-wrapper {
+    overflow-x: auto; /* Allow scroll if table too wide */
+    margin-top: 2rem;
+  }
+  
+  .stats-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .stats-table th,
+  .stats-table td {
+    padding: 0.5rem;
+    text-align: center;
+    border: 1px solid #ccc;
+  }
+  
+  .stats-table th {
+    background-color: #f1f1f1;
+  }
+  
+  .stats-table tr:nth-child(even) {
+    background-color: #fafafa;
+  }
+  

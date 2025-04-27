@@ -1,40 +1,64 @@
 @if (player) {
-    <h2>{{ player.firstName }} {{ player.lastName }}</h2>
-    <table class='table table-striped' aria-labelledby="tableLabel">
-      <thead>
-        <tr>
-          <th>W</th>
-          <th>L</th>
-          <th>G</th>
-          <th>ERA</th>
-          <th>SV</th>
-          <th>IP</th>
-          <th>SO</th>
-          <th>BB</th>
-          <th>H</th>
-          <th>HBP</th>
-          <th>WHIP</th>
-          <th>FIP</th>
-        </tr>
-      </thead>
-      <tbody>
+  <div class="pitcher-container">
+    <h2>{{ player.name }}</h2>
+
+    <div class="stats-table-wrapper">
+      <table class="stats-table">
+        <thead>
+          <tr>
+            <th>W</th>
+            <th>L</th>
+            <th>G</th>
+            <th>GS</th>
+            <th>QS</th>
+            <th>CG</th>
+            <th>SHO</th>
+            <th>SV</th>
+            <th>HD</th>
+            <th>BS</th>
+            <th>IP</th>
+            <th>BF</th>
+            <th>H</th>
+            <th>R</th>
+            <th>ER</th>
+            <th>HR</th>
+            <th>BB</th>
+            <th>IBB</th>
+            <th>HBP</th>
+            <th>WP</th>
+            <th>BK</th>
+            <th>SO</th>
+          </tr>
+        </thead>
+        <tbody>
           <tr>
             <td>{{ player.wins }}</td>
-            <td>{{ player.loses }}</td>
-            <td>{{ player.gamesPlayed }}</td>
-            <td>{{ player.era }}</td>
+            <td>{{ player.losses }}</td>
+            <td>{{ player.games_Played }}</td>
+            <td>{{ player.games_Started }}</td>
+            <td>{{ player.quality_Starts }}</td>
+            <td>{{ player.complete_Games }}</td>
+            <td>{{ player.shutouts }}</td>
             <td>{{ player.saves }}</td>
-            <td>{{ player.inningsPitched }}</td>
-            <td>{{ player.strikeouts }}</td>
-            <td>{{ player.walks }}</td>
+            <td>{{ player.holds }}</td>
+            <td>{{ player.blown_Saves }}</td>
+            <td>{{ player.innings_Pitched }}</td>
+            <td>{{ player.total_Batters_Faced }}</td>
             <td>{{ player.hits }}</td>
-            <td>{{ player.hitByPitch }}</td>
-            <td>{{ player.whip }}</td>
-            <td>{{ player.fip }}</td>
-          </tr>  
-        
-      </tbody>
-    </table>
-  } @else {
-    <p><em>Loading...</em></p>
-  }
+            <td>{{ player.runs }}</td>
+            <td>{{ player.earned_Runs }}</td>
+            <td>{{ player.home_Runs }}</td>
+            <td>{{ player.walks }}</td>
+            <td>{{ player.intentional_Walks }}</td>
+            <td>{{ player.hbp }}</td>
+            <td>{{ player.wild_Pitches }}</td>
+            <td>{{ player.balks }}</td>
+            <td>{{ player.strikeouts }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+} @else {
+  <p><em>Loading...</em></p>
+}
