@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Position_Player } from '../position-player';
 import { ActivatedRoute, RouterLink } from '@angular/router';
-import { environment } from '../../environments/environment.development';
+import { environment } from '../../environments/environment';
 import { DecimalPipe } from '@angular/common';
 
 @Component({

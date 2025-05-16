@@ -3,7 +3,7 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { ActivatedRoute, Router } from '@angular/router';
-import { environment } from '../../environments/environment.development';
+import { environment } from '../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Location } from '@angular/common';
 import { inject } from '@angular/core';
