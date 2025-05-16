@@ -3,10 +3,14 @@ import { Component } from '@angular/core';
 import { Position_Player } from '../position-player';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { environment } from '../../environments/environment.development';
+import { DecimalPipe } from '@angular/common';
 
 @Component({
   selector: 'app-position-players',
-  imports: [],
+  imports: [
+    RouterLink,
+    DecimalPipe
+  ],
   templateUrl: './position-players.component.html',
   styleUrl: './position-players.component.css'
 })
@@ -15,7 +19,7 @@ export class PositionPlayersComponent {
   
   constructor(
     private http: HttpClient, 
-    private activatedRoute : ActivatedRoute
+    private activatedRoute : ActivatedRoute,
   ) {}
   ngOnInit(): void {
     const id = this.activatedRoute.snapshot.paramMap.get("id");

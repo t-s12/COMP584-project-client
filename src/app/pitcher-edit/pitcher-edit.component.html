@@ -1,0 +1,130 @@
+<div class="login">
+    <h1>Edit Player Stats</h1>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+  
+        <mat-form-field>
+            <mat-label>Player Name:</mat-label>
+            <input matInput formControlName="name" required="required" placeholder="Name">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Wins:</mat-label>
+            <input matInput formControlName="wins" required="required" placeholder="wins">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Losses:</mat-label>
+            <input matInput formControlName="losses" required="required" placeholder="losses">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>ERA:</mat-label>
+            <input matInput formControlName="era" required="required" placeholder="era">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Games Played:</mat-label>
+            <input matInput formControlName="games_Played" required="required" placeholder="games_Played">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Games Started:</mat-label>
+            <input matInput formControlName="games_Started" required="required" placeholder="games_Started">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Quality Starts:</mat-label>
+            <input matInput formControlName="quality_Starts" required="required" placeholder="quality_Starts">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Complete Games:</mat-label>
+            <input matInput formControlName="complete_Games" required="required" placeholder="complete_Games">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Shutouts:</mat-label>
+            <input matInput formControlName="shutouts" required="required" placeholder="shutouts">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Saves:</mat-label>
+            <input matInput formControlName="saves" required="required" placeholder="saves">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Holds:</mat-label>
+            <input matInput formControlName="holds" required="required" placeholder="holds">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Blown Saves:</mat-label>
+            <input matInput formControlName="blown_Saves" required="required" placeholder="blown_Saves">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Innings Pitched:</mat-label>
+            <input matInput formControlName="innings_Pitched" required="required" placeholder="innings_Pitched">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Batters Faced:</mat-label>
+            <input matInput formControlName="total_Batters_Faced" required="required" placeholder="total_Batters_Faced">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Hits:</mat-label>
+            <input matInput formControlName="hits" required="required" placeholder="hits">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Runs:</mat-label>
+            <input matInput formControlName="runs" required="required" placeholder="runs">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Earned Runs:</mat-label>
+            <input matInput formControlName="earned_Runs" required="required" placeholder="earned_Runs">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Home Runs:</mat-label>
+            <input matInput formControlName="home_Runs" required="required" placeholder="home_Runs">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Walks:</mat-label>
+            <input matInput formControlName="walks" required="required" placeholder="walks">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Intentional Walks:</mat-label>
+            <input matInput formControlName="intentional_Walks" required="required" placeholder="intentional_Walks">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Hit By Pitches:</mat-label>
+            <input matInput formControlName="hbp" required="required" placeholder="hbp">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Wild Pitches:</mat-label>
+            <input matInput formControlName="wild_Pitches" required="required" placeholder="wild_Pitches">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Balks:</mat-label>
+            <input matInput formControlName="balks" required="required" placeholder="balks">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Strikeouts:</mat-label>
+            <input matInput formControlName="strikeouts" required="required" placeholder="strikeouts">
+        </mat-form-field>
+  
+        <div>
+            <button mat-flat-button color="primary" type="submit">Submit</button>
+            <button mat-flat-button color="secondary" (click)="goBack()">Cancel</button>
+        </div>
+    </form>
+  </div>

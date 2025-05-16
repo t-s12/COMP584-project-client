@@ -6,7 +6,7 @@ import { environment } from '../../environments/environment.development';
 
 @Component({
   selector: 'app-pitchers',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './pitchers.component.html',
   styleUrl: './pitchers.component.css'
 })
@@ -15,7 +15,7 @@ export class PitchersComponent {
   
   constructor(
     private http: HttpClient, 
-    private activatedRoute : ActivatedRoute
+    private activatedRoute : ActivatedRoute,
   ) {}
   ngOnInit(): void {
     const id = this.activatedRoute.snapshot.paramMap.get("id");
@@ -23,6 +23,7 @@ export class PitchersComponent {
       this.getPitcher(id);
     }
   }
+
 
   getPitcher(id: string){
     this.http.get<Pitcher>(`${environment.baseUrl}api/Pitchers/${id}`).subscribe({

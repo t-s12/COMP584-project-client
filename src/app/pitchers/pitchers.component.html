@@ -1,6 +1,16 @@
 @if (player) {
+  <div>
+    <button
+      mat-flat-button
+      color="secondary"
+      [routerLink]="['/teams', player.teamId]"
+    >
+      Back
+    </button>
+  </div>
+
   <div class="pitcher-container">
-    <h2>{{ player.name }}</h2>
+    <h2><a [routerLink]="['/pitcherEdit', player.id]">{{ player.name }}</a></h2>
 
     <div class="stats-table-wrapper">
       <table class="stats-table">
@@ -8,6 +18,7 @@
           <tr>
             <th>W</th>
             <th>L</th>
+            <th>ERA</th>
             <th>G</th>
             <th>GS</th>
             <th>QS</th>
@@ -34,6 +45,7 @@
           <tr>
             <td>{{ player.wins }}</td>
             <td>{{ player.losses }}</td>
+            <td>{{ player.era }}</td>
             <td>{{ player.games_Played }}</td>
             <td>{{ player.games_Started }}</td>
             <td>{{ player.quality_Starts }}</td>

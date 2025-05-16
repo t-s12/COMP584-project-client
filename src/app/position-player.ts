@@ -12,6 +12,7 @@ export interface Position_Player {
     home_Runs: number;
     runs_Scored: number;
     rbi: number;
+    walks: number;
     intentional_Walks: number;
     strikeouts: number;
     hbp: number;

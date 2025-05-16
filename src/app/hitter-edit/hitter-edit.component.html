@@ -1,0 +1,115 @@
+<div class="login">
+    <h1>Edit Player Stats</h1>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+  
+        <mat-form-field>
+            <mat-label>Player Name:</mat-label>
+            <input matInput formControlName="name" required="required" placeholder="Name">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Games Played:</mat-label>
+            <input matInput formControlName="games_Played" required="required" placeholder="games_Played">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>At Bats:</mat-label>
+            <input matInput formControlName="at_Bats" required="required" placeholder="at_Bats">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Plate Appearances:</mat-label>
+            <input matInput formControlName="plate_Appearances" required="required" placeholder="plate_Appearances">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Hits:</mat-label>
+            <input matInput formControlName="hits" required="required" placeholder="hits">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Singles:</mat-label>
+            <input matInput formControlName="singles" required="required" placeholder="singles">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Doubles:</mat-label>
+            <input matInput formControlName="doubles" required="required" placeholder="doubles">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Triples:</mat-label>
+            <input matInput formControlName="triples" required="required" placeholder="triples">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Home Runs:</mat-label>
+            <input matInput formControlName="home_Runs" required="required" placeholder="home_Runs">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Runs Saved:</mat-label>
+            <input matInput formControlName="runs_Scored" required="required" placeholder="runs_Scored">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>RBIs:</mat-label>
+            <input matInput formControlName="rbi" required="required" placeholder="rbi">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Walks:</mat-label>
+            <input matInput formControlName="walks" required="required" placeholder="walks">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Intentional Walks:</mat-label>
+            <input matInput formControlName="intentional_Walks" required="required" placeholder="intentional_Walks">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Strikeouts:</mat-label>
+            <input matInput formControlName="strikeouts" required="required" placeholder="strikeouts">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>HBP:</mat-label>
+            <input matInput formControlName="hbp" required="required" placeholder="hbp">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Sac Flies:</mat-label>
+            <input matInput formControlName="sac_Fly" required="required" placeholder="sac_Fly">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Sac Hits:</mat-label>
+            <input matInput formControlName="sac_Hit" required="required" placeholder="sac_Hit">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>GDP:</mat-label>
+            <input matInput formControlName="gdp" required="required" placeholder="gdp">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Stolen Bases:</mat-label>
+            <input matInput formControlName="stolen_Bases" required="required" placeholder="stolen_Bases">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Caught Stealing:</mat-label>
+            <input matInput formControlName="caught_Stealing" required="required" placeholder="caught_Stealing">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Batting Average:</mat-label>
+            <input matInput formControlName="batting_Average" required="required" placeholder="batting_Average">
+        </mat-form-field>
+  
+        <div>
+            <button mat-flat-button color="primary" type="submit">Submit</button>
+            <button mat-flat-button color="secondary" (click)="goBack()">Cancel</button>
+        </div>
+    </form>
+  </div>

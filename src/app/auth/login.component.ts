@@ -5,6 +5,7 @@ import { MatInputModule } from '@angular/material/input'
 import { Router, RouterLink } from '@angular/router';
 import { LoginRequest } from './login-request';
 import { AuthService } from './auth.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-login',
@@ -20,7 +21,9 @@ import { AuthService } from './auth.service';
 export class LoginComponent implements OnInit{
   form!: FormGroup;
 
-  constructor(private authService: AuthService, private router: Router){ }
+  constructor(private authService: AuthService, 
+    private router: Router, 
+    private location: Location){ }
 
   ngOnInit(): void {
     this.form = new FormGroup({
@@ -40,7 +43,7 @@ export class LoginComponent implements OnInit{
         console.log(result);
         if(result.success)
           {
-          this.router.navigate(["/"]);
+          this.location.back(); // go back to the page they were on when they logged in
         }
       },
       error: error => console.error(error),

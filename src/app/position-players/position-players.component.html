@@ -1,6 +1,16 @@
 @if (player) {
+  <div>
+    <button
+      mat-flat-button
+      color="secondary"
+      [routerLink]="['/teams', player.teamId]"
+    >
+      Back
+    </button>
+  </div>
+
   <div class="position-player-container">
-    <h2>{{ player.name }}</h2>
+    <h2><a [routerLink]="['/hitterEdit', player.id]">{{ player.name }}</a></h2>
 
     <div class="stats-table-wrapper">
       <table class="stats-table">
@@ -11,11 +21,13 @@
             <th>AB</th>
             <th>BA</th>
             <th>H</th>
+            <th>1B</th>
             <th>2B</th>
             <th>3B</th>
             <th>HR</th>
             <th>R</th>
             <th>RBI</th>
+            <th>BB</th>
             <th>IBB</th>
             <th>SO</th>
             <th>HBP</th>
@@ -31,13 +43,15 @@
             <td>{{ player.games_Played }}</td>
             <td>{{ player.plate_Appearances }}</td>
             <td>{{ player.at_Bats }}</td>
-            <td>{{ player.batting_Average }}</td>
+            <td>{{ player.batting_Average | number:'1.3-3' }}</td>
             <td>{{ player.hits }}</td>
+            <td>{{ player.singles }}</td>
             <td>{{ player.doubles }}</td>
             <td>{{ player.triples }}</td>
             <td>{{ player.home_Runs }}</td>
             <td>{{ player.runs_Scored }}</td>
             <td>{{ player.rbi }}</td>
+            <td>{{ player.walks }}</td>
             <td>{{ player.intentional_Walks }}</td>
             <td>{{ player.strikeouts }}</td>
             <td>{{ player.hbp }}</td>
